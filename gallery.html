@@ -8,7 +8,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
-</head>
+    <style>.a{cursor: pointer;}</style>
+   <script type="text/javascript">
+        function prev(){
+              var mi=document.getElementById("MI");
+              var mc=document.getElementById("MC");
+           var X=mi.src;
+            var i = X.split("/");
+            var c=i[i.length-1];
+            var f=c.substring(0,c.length-4);
+            var nl= parseInt(f)-1;
+            mi.src=nl+".jpg";   
+            
+        }
+        function next(){
+             var mi=document.getElementById("MI");
+            var mc=document.getElementById("MC");
+           var X=mi.src;
+            var i = X.split("/");
+            var c=i[i.length-1];
+            var f=c.substring(0,c.length-4);
+            var nl= parseInt(f)+1;
+            mi.src=nl+".jpg";        
+        }
+    
+    
+    </script></head>
 <body>
        <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -49,7 +74,7 @@
                 Gallery
             </h3>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 a">
                     <div class="thumbnail"data-toggle="modal" data-target="#myModal">
                        
                             <img src="http://via.placeholder.com/350x250" >
@@ -58,7 +83,7 @@
                             </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 a">
                     <div class="thumbnail"data-toggle="modal" data-target="#myModal">
                             <img src="http://via.placeholder.com/350x250" >
                             <div class="caption">
@@ -66,10 +91,10 @@
                             </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 a">
                     <div class="thumbnail" data-toggle="modal" data-target="#myModal">
                         
-                            <img src="http://via.placeholder.com/350x250" >
+                            <img  src="http://via.placeholder.com/350x250" >
                             <div class="caption">
                                 <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
                             </div>
@@ -90,10 +115,17 @@
         <h4 class="modal-title">Modal Header</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
+          <div class="thumbnail">
+       <img id="MI" src="2.jpg" >
+                            <div  id="MC" class="caption" style="text-align: center;">
+                                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                            </div>
+      </div></div>
       <div class="modal-footer">
+         
+          <button type="button" onclick="prev()" class="btn btn-default" style="float: left;">PREV</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+           <button type="button" onclick="next()" class="btn btn-default" style="float: right;">NEXT</button>
       </div>
     </div>
     </div>
