@@ -31,8 +31,10 @@
             var nl= parseInt(f)+1;
             mi.src=nl+".jpg";        
         }
-    
-    
+       function x(L){
+           document.getElementById("MI").src=L+".jpg"; 
+           document.getElementById("MC").innerHTML=document.getElementById(L).innerHTML;
+       }
     </script></head>
 <body>
        <nav class="navbar navbar-default">
@@ -75,27 +77,26 @@
             </h3>
             <div class="row">
                 <div class="col-md-4 a">
-                    <div class="thumbnail"data-toggle="modal" data-target="#myModal">
-                       
-                            <img src="http://via.placeholder.com/350x250" >
-                            <div class="caption">
+                    <div class="thumbnail"data-toggle="modal" data-target="#myModal" onclick="x(1);">
+                          <img src="1.jpg" >
+                            <div id="1" class="caption">
                                 <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
                             </div>
                     </div>
                 </div>
                 <div class="col-md-4 a">
-                    <div class="thumbnail"data-toggle="modal" data-target="#myModal">
-                            <img src="http://via.placeholder.com/350x250" >
-                            <div class="caption">
+                    <div class="thumbnail"data-toggle="modal" data-target="#myModal" onclick="x(2);">
+                            <img src="2.jpg" >
+                            <div id="2" class="caption">
                                 <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
                             </div>
                     </div>
                 </div>
                 <div class="col-md-4 a">
-                    <div class="thumbnail" data-toggle="modal" data-target="#myModal">
+                    <div class="thumbnail" data-toggle="modal" data-target="#myModal" onclick="x(3);">
                         
-                            <img  src="http://via.placeholder.com/350x250" >
-                            <div class="caption">
+                            <img  src="3.jpg" >
+                            <div id="3" class="caption">
                                 <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
                             </div>
                         
@@ -109,16 +110,16 @@
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
-    <div class="modal-content">
+    <div class="modal-content" >
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Modal Header</h4>
       </div>
       <div class="modal-body">
           <div class="thumbnail">
-       <img id="MI" src="2.jpg" >
-                            <div  id="MC" class="caption" style="text-align: center;">
-                                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+       <img id="MI">
+                            <div  class="caption" style="text-align: center;">
+                                <p id="MC"></p>
                             </div>
       </div></div>
       <div class="modal-footer">
@@ -134,7 +135,7 @@
     
     
     <div class="container-fluid bg-gray">
-      <div class="container">
+      <div class="container" onclick="alert(x+y);">
             <p>
                 KCG PROGRAMMING CLUB
             </p>
