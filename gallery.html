@@ -1,148 +1,210 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-<head>
-    <title>KCG Programming Club - Gallery</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<title>KCG Programming Club - Gallery</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <style>.a{cursor: pointer;}</style>
+          <style>.a{cursor: pointer;}</style>
+
    <script type="text/javascript">
+
         function prev(){
+
               var mi=document.getElementById("MI");
+
               var mc=document.getElementById("MC");
+
            var X=mi.src;
+
             var i = X.split("/");
+
             var c=i[i.length-1];
+
             var f=c.substring(0,c.length-4);
+
             var nl= parseInt(f)-1;
+
             mi.src=nl+".jpg";   
+
             
+
         }
+
         function next(){
+
              var mi=document.getElementById("MI");
+
             var mc=document.getElementById("MC");
+
            var X=mi.src;
+
             var i = X.split("/");
+
             var c=i[i.length-1];
+
             var f=c.substring(0,c.length-4);
+
             var nl= parseInt(f)+1;
-            mi.src=nl+".jpg";        
+
+            mi.src=nl+".jpeg";        
+
         }
+
        function x(L){
+
            document.getElementById("MI").src=L+".jpg"; 
+
            document.getElementById("MC").innerHTML=document.getElementById(L).innerHTML;
+
        }
-    </script></head>
-<body>
-       <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">KCG Programming Club</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <!-- nabar left -->
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li ><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="events.html">Events<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
+
+        </script>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="logo"><a href="trial.html"><span>KCG PROGRAMMING CLUB</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+                    <li><a href="Home.html">Home</a></li>
                             <li><a href="events.html#UE">Upcoming Events</a></li>
                             <li><a href="events.html#E">Events</a></li>
                             <li><a href="events.html#EE">External Events</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li class="active"><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+					<li><a href="Contactus.html">Contact us</a></li>
                 </ul>
-            </div>
-        </div>
-    </nav>
-        <div class="container-fluid ">
+			</nav>
+         <section id="two" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+                        <h2>GALLERY</h2>
+                        <p></p>
+                        <h4></h4>
+                    </header>
+				</div>
+			</section>
+        <section id="one" class="wrapper style2">
+				<div class="inner">
+					<div class="grid-style">
 
-        <div class="container ">
-
-            <h3>
-                Gallery
-            </h3>
-            <div class="row">
-                <div class="col-md-4 a">
-                    <div class="thumbnail"data-toggle="modal" data-target="#myModal" onclick="x(1);">
-                          <img src="1.jpg" >
-                            <div id="1" class="caption">
-                                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                            </div>
-                    </div>
-                </div>
-                <div class="col-md-4 a">
-                    <div class="thumbnail"data-toggle="modal" data-target="#myModal" onclick="x(2);">
-                            <img src="2.jpg" >
-                            <div id="2" class="caption">
-                                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                            </div>
-                    </div>
-                </div>
-                <div class="col-md-4 a">
-                    <div class="thumbnail" data-toggle="modal" data-target="#myModal" onclick="x(3);">
+						<div>
+							<div class="thumbnail" data-toggle="modal" data-target="#myModal" onclick="x(1);">
+                                	<div id="1" class ="caption">
+								<div class="image fit">
+                                <img src="images/1.jpeg" alt=""/>
+								</div>
+								<div class="content">
+									<header class="align-center">
+									</header>
+								Photo description</div>
+								</div>
+							</div>
+						</div>
+                    <div>
                         
-                            <img  src="3.jpg" >
-                            <div id="3" class="caption">
-                                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                            </div>
-                        
-                    </div>
-                </div>
-            </div>
+							<div class="thumbnail" data-toggle="modal" data-target="#myModal" onclick="x(2);">
+                                <div id="2" class="caption">
+								<div class="image fit">
+                                <img src="images/2.jpeg" alt=""/>
+								</div>
+								<div class="content">
+									<header class="align-center">
+									</header>
+									Photo description2</div>
+								</div>
+							</div>
+						</div>
+            <div>
+							<div class="thumbnail" data-toggle="modal" data-target="#myModal" onclick="x(3);">
+                                <div id="3" class="caption">
+								<div class="image fit">
+                                    
+                                <img src="images/3.jpeg" alt=""/>
+								</div>
+									<header class="align-center">
+									</header>
+									Photo description</div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</section>
+    <div class="modal fade" id="myModal" role="dialog">
 
-
-        </div>
-    </div>
-<div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
+
     
+
     <div class="modal-content" >
+
       <div class="modal-header">
+
         <button type="button" class="close" data-dismiss="modal">&times;</button>
+
         <h4 class="modal-title">Modal Header</h4>
+
       </div>
+
       <div class="modal-body">
+
           <div class="thumbnail">
-       <img id="MI">
+          <img id="MI">
+
                             <div  class="caption" style="text-align: center;">
+
                                 <p id="MC"></p>
+
                             </div>
+
       </div></div>
+
       <div class="modal-footer">
+
          
+
           <button type="button" onclick="prev()" class="btn btn-default" style="float: left;">PREV</button>
+
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
            <button type="button" onclick="next()" class="btn btn-default" style="float: right;">NEXT</button>
+
       </div>
-    </div>
-    </div>
-    </div>
-    
-    
-    
-    <div class="container-fluid bg-gray">
-      <div class="container" onclick="alert(x+y);">
-            <p>
-                KCG PROGRAMMING CLUB
-            </p>
-
-        </div>
 
     </div>
 
-</body>
+    </div>
+
+    </div>
+       
+           <footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy;All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
